@@ -2,10 +2,12 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 	"strconv"
 
+	"github.com/golang/protobuf/proto"
 	"github.com/gorilla/mux"
 )
 
@@ -17,6 +19,22 @@ type Output struct {
 }
 
 func main() {
+	input := ImputData{A: 20, B: 20, C: 30}
+	data, err := proto.Marshal(&input)
+	if err != nil {
+		log.Fatalln(input)
+	}
+	fmt.Println(data)
+
+	output := ImputData{}
+	err = proto.Unmarshal(data, &output)
+	if err != nil {
+		log.Fatalln(data)
+	}
+	fmt.Println(output)
+
+	return
+
 	r := mux.NewRouter()
 	r.HandleFunc("/{a}/{b}/{c}", getPifagor).Methods("GET")
 	log.Fatal(http.ListenAndServe(":8081", r))

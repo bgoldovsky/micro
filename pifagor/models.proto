@@ -3,14 +3,14 @@ syntax = "proto3";
 package main;
 
 message ImputData {
-    int a = 1;
-    int b = 2;
-    int c = 3;
+    int64 a = 1;
+    int64 b = 2;
+    int64 c = 3;
 }
 
 message OutputData {
-    int a = 1;
-    int b = 2;
-    int c = 3;
+    int64 a = 1;
+    int64 b = 2;
+    int64 c = 3;
     string result = 4;
 }
