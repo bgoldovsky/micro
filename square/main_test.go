@@ -6,22 +6,22 @@ import (
 )
 
 type LinearData struct {
-	B        int
-	C        int
+	B        int64
+	C        int64
 	Expected string
 }
 
 type QuadraticData struct {
-	A        int
-	B        int
-	C        int
+	A        int64
+	B        int64
+	C        int64
 	Expected string
 }
 
 type SolveData struct {
-	A        int
-	B        int
-	C        int
+	A        int64
+	B        int64
+	C        int64
 	Expected string
 }
 

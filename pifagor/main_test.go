@@ -3,9 +3,9 @@ package main
 import "testing"
 
 type PifagorianData struct {
-	A        int
-	B        int
-	C        int
+	A        int64
+	B        int64
+	C        int64
 	Expected string
 }
 
