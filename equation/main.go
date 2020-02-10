@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 	"strconv"
@@ -46,12 +47,13 @@ func getSolve(w http.ResponseWriter, r *http.Request) {
 	}
 
 	result := Solve(a, b, c)
+	equation := fmt.Sprintf("%dx^2 + %dx + %d = 0", a, b, c)
 
 	data := Output{
 		A:        a,
 		B:        b,
 		C:        c,
-		Equation: "ax^2 + bx + c = 0",
+		Equation: equation,
 		Result:   result,
 	}
 
