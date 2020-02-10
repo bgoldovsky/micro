@@ -12,7 +12,7 @@ import (
 
 type Output struct {
 	A        int64  `json:"a"`
-	B        int64  `json:b"`
+	B        int64  `json:"b"`
 	C        int64  `json:"c"`
 	Equation string `json:"equation"`
 	Result   string `json:"result"`

@@ -11,7 +11,7 @@ import (
 
 type Output struct {
 	A      int64  `json:"a"`
-	B      int64  `json:b"`
+	B      int64  `json:"b"`
 	C      int64  `json:"c"`
 	Result string `json:"result"`
 }
@@ -19,7 +19,7 @@ type Output struct {
 func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/{a}/{b}/{c}", getPifagor).Methods("GET")
-	log.Fatal(http.ListenAndServe(":8080", r))
+	log.Fatal(http.ListenAndServe(":8081", r))
 }
 
 func getPifagor(w http.ResponseWriter, r *http.Request) {
