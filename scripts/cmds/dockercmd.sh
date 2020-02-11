@@ -1,6 +1,7 @@
 sudo docker run -it ubuntu bash
 sudo docker run hello-world
 
+docker kill d85b8bf3dc33
 sudo docker ps -l
 sudo docker rm d85b8bf3dc33
 sudo docker rm -v $(docker ps -aq -f status=exited)
